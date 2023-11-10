@@ -1,0 +1,53 @@
+//animals
+package zoo;
+
+public class animals {
+	//insatnce fields
+	private String name;
+	private int age;
+	private String species;
+	private static int animalCount = 0;
+	private int ID = 1000;
+
+	//animal constructor
+	animals(String name, int age, String species) {
+		animalCount++;
+		this.name = name;
+		this.age = age;
+		this.species = species;
+		ID = 1000 + animalCount;
+		
+		
+	}
+	void displayInfo() {
+		System.out.println("Welcome to the zoo!");
+		System.out.println("This newly registered animal is a "+ species);
+		System.out.println("Their name is "+ name);
+		System.out.println("And is currently "+ age+ " years old!");
+		System.out.println("Your animal ID is "+ ID + " and the zoo now has " + animalCount + " animals!");
+	}
+	
+   
+	
+
+}
+
+//main /////////////////////////////////
+package zoo;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		animals nylaTheTiger = new animals("Nyla", 14, "Tiger");
+		nylaTheTiger.displayInfo();
+		animals bruce = new animals("Bruce", 2, "Hippo");
+		bruce.displayInfo();
+		
+
+	}
+
+}
+
+
+
