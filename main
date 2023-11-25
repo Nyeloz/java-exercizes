@@ -1,0 +1,38 @@
+// class name is main, file is hiLow
+
+package hiLow;
+import java.util.Scanner;
+public class main {
+
+	
+static int randFunc() {
+			int min = 1;
+			int max = 6;
+			int randomNumber = (int) (Math.random() * (max - min + 1) + min);
+			return randomNumber;
+		}
+
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int target = randFunc();
+		
+		// TODO Auto-generated method stub
+		System.out.println("Choose a number between 1 and 6 inclusively");
+		int chooser = sc.nextInt();
+		
+		
+		if(chooser > target ) {
+			System.out.println("High! your guess was: " + chooser + "\n and the actual number was: " + target);
+		}else if (chooser < target) {
+		System.out.println("Low!  your guess was: " + chooser + "\n and the actual number was: " + target);
+		}else if(chooser == target) {
+		System.out.println("You guessed the number " + target +" correctly!" );
+		
+	}
+		
+		
+	
+
+	}
