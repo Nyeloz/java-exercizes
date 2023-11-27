@@ -1,0 +1,33 @@
+import java.util.Random;
+
+public class Santa {
+	Random ran = new Random();
+	static int ranChoice = new Random().nextInt(6) + 1; 
+	static String gift;
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		switch (ranChoice) {
+		case 1: gift = "A pair of socks";
+		break;
+		
+		
+		case 2: gift = "A new playstation";
+				break;
+		
+		case 3: gift = "A new Xbox series X";
+		break;
+		
+		case 4: gift = "A new computer";
+		break;
+		case 5: gift = "A lump of coal";
+		break;
+		case 6: gift = "Santa gtot stuck in the chimney and didn't make it";
+		
+		}
+		System.out.println(gift);
+
+	}
+
+}
